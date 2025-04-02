@@ -130,8 +130,23 @@
     background: linear-gradient(90deg, #4f46e5, #9333ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-size: 3.3rem; */
     font-weight: bold;
-    /* max-width: 50rem; */
   }  
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  perspective: 1000px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1600px;
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.hero-image.scrolled {
+  transform: rotateX(0deg) scale(1) translateY(40px);
 }
